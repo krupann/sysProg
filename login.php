@@ -6,7 +6,6 @@ session_start();
 $login = $_POST['login'];
 $password = $_POST['password'];
 foreach($_SESSION['users'] as $user) {
-    echo $user->getPassword();
     if ($user->getLogin() == $login && $user->getPassword() == $password) {
         $_SESSION['user'] = $user;
         if ($user->getID() == 0) {
